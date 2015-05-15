@@ -1,0 +1,10 @@
+****
+after read in branch values, store the value as 0's and 1's in the data structure. This way will same computing time because integer comparison is faster than string comparison
+
+!!!!!!!!!!!!!!!!!!!!!!!!!
+tournament
+- select prediction value from either gshare or bimodal 2 bit
+- uses a selection table (like the one for bimodal 2 bit) strongly prefer gshare -> weakly prefer gshare -> weakly prefer bimodal -> strongly prefer bimodal
+- if both predicted have the same prediction, then no update needed for the selector table
+- if you're in a state of gshare and gshare's prediction was wrong, update (move toward bimodal)
+- if you're in a state of bimodal and bimodal's prediction was wrong, update (move toward gshare)
